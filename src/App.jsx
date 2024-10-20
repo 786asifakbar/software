@@ -4,10 +4,10 @@ import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import Home from './pages/Home';
  import About from './pages/About';
-// import ServicesPage from './Pages/ServicesPage';
-// import Overview from './Pages/Overview';
-// import Testimonials from './Pages/Testimonials';
-// import ContactUs from './Pages/ContactUs';
+import ServicesPage from './pages/ServicesPage';
+import Overview from './pages/Overview';
+import Testimonials from './pages/Testimonials';
+import ContactUs from './pages/ContactUs';
 import Footer from './Components/Footer';
 // import GraphicsDesign from './servicesPages/GraphicsDesign';
 // import BlockChain from "./servicesPages/BlockChain"
@@ -35,7 +35,12 @@ function App() {
       <Routes>
         <Route Exact path="/" Component={Home} />,
         <Route Exact path="/About" Component={About } />,
-        {/* <Route Exact path="/ServicesPage" Component={ServicesPage } />, */}
+        <Route Exact path="/ServicesPage" Component={ServicesPage } />,
+        <Route Exact path="/Overview" Component={Overview } />,
+        <Route Exact path="/Testimonials" Component={Testimonials } />,
+        <Route Exact path="/ContactUs" Component={ContactUs} />,
+
+
         {/* <Route Exact path="/GraphicsDesign" Component={GraphicsDesign } />, */}
         {/* <Route Exact path="/BlockChain" Component={BlockChain } />, */}
         {/* <Route Exact path="/WebAppDevelopment" Component={WebAppDevelopment} />, */}
@@ -46,9 +51,7 @@ function App() {
         {/* <Route Exact path="/CloudSolutions" Component={CloudSolutions } />, */}
         {/* <Route Exact path="/AwsEx" Component={AwsEx } />, */}
         {/* <Route Exact path="/PosEx" Component={PosEx } />, */}
-        {/* <Route Exact path="/Overview" Component={Overview } />, */}
-        {/* <Route Exact path="/Testimonials" Component={Testimonials } />, */}
-        {/* <Route Exact path="/ContactUs" Component={ContactUs} />, */}
+         
       </Routes>
       <Footer />
       </BrowserRouter>
