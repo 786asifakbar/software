@@ -8,7 +8,6 @@ const IsometricDesign = () => {
            }}>
         <h1 className="text-7xl font-bold mb-8 text-center drop-shadow-lg">
           <span className="text-blue-600">Welcome to </span>
-          <span className="text-white"> NexOusTech </span>
         </h1>
   
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">

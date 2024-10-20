@@ -3,7 +3,7 @@ import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
 import Home from './pages/Home';
-// import WhyUs from './Pages/WhyUs';
+ import About from './pages/About';
 // import ServicesPage from './Pages/ServicesPage';
 // import Overview from './Pages/Overview';
 // import Testimonials from './Pages/Testimonials';
@@ -34,22 +34,21 @@ function App() {
     <Navbar/>
       <Routes>
         <Route Exact path="/" Component={Home} />,
-        {/* <Route Exact path="/WhyUs" Component={WhyUs } />,
-        <Route Exact path="/ServicesPage" Component={ServicesPage } />,
-        <Route Exact path="/GraphicsDesign" Component={GraphicsDesign } />,
-        <Route Exact path="/BlockChain" Component={BlockChain } />,
-        <Route Exact path="/WebAppDevelopment" Component={WebAppDevelopment} />,
-        <Route Exact path="/WebDevelopment" Component={WebDevelopment} />,
-        <Route Exact path="/DigitalMarketing" Component={DigitalMarketing} />,
-        <Route Exact path="/SeoEx" Component={SeoEx} />,
-        <Route Exact path="/ErpEx" Component={ErpEx} />,
-        <Route Exact path="/CloudSolutions" Component={CloudSolutions } />,
-        <Route Exact path="/AwsEx" Component={AwsEx } />,
-        <Route Exact path="/PosEx" Component={PosEx } />,
-        <Route Exact path="/Overview" Component={Overview } />,
-        <Route Exact path="/Testimonials" Component={Testimonials } />,
-        <Route Exact path="/ContactUs" Component={ContactUs} />,
-         */}
+        <Route Exact path="/About" Component={About } />,
+        {/* <Route Exact path="/ServicesPage" Component={ServicesPage } />, */}
+        {/* <Route Exact path="/GraphicsDesign" Component={GraphicsDesign } />, */}
+        {/* <Route Exact path="/BlockChain" Component={BlockChain } />, */}
+        {/* <Route Exact path="/WebAppDevelopment" Component={WebAppDevelopment} />, */}
+        {/* <Route Exact path="/WebDevelopment" Component={WebDevelopment} />, */}
+        {/* <Route Exact path="/DigitalMarketing" Component={DigitalMarketing} />, */}
+        {/* <Route Exact path="/SeoEx" Component={SeoEx} />, */}
+        {/* <Route Exact path="/ErpEx" Component={ErpEx} />, */}
+        {/* <Route Exact path="/CloudSolutions" Component={CloudSolutions } />, */}
+        {/* <Route Exact path="/AwsEx" Component={AwsEx } />, */}
+        {/* <Route Exact path="/PosEx" Component={PosEx } />, */}
+        {/* <Route Exact path="/Overview" Component={Overview } />, */}
+        {/* <Route Exact path="/Testimonials" Component={Testimonials } />, */}
+        {/* <Route Exact path="/ContactUs" Component={ContactUs} />, */}
       </Routes>
       <Footer />
       </BrowserRouter>

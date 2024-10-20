@@ -14,9 +14,9 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-3xl font-bold text-white">
           <NavLink to="/">
-            <span className="text-yellow-300">N</span>EX
-            <span className="text-yellow-300">O</span>US
-            <span className="text-yellow-300">T</span>ECH
+            <span className="text-yellow-400">N</span>EX
+            <span className="text-yellow-400">O</span>US
+            <span className="text-yellow-400">T</span>ECH
           </NavLink>
         </div>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/WhyUs">Why Us</NavLink>
+            <NavLink to="/About">Why Us</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
             <NavLink to="/ServicesPage">Services</NavLink>
@@ -74,5 +74,4 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;
