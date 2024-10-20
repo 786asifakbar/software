@@ -9,71 +9,69 @@ const Navbar = () => {
   };
 
   return (
-    <>
-      <header className="bg-slate-100 text-black shadow-2xl shadow-gray-400">
-        <nav className="container mx-auto flex items-center justify-between">
-          {/* Logo */}
-          <div className="text-xl font-bold">
-            <NavLink to="/">
-              <span className="text-3xl">N</span>EX
-              <span className="text-3xl">O</span>US
-              <span className="text-3xl">T</span>ECH
-            </NavLink>
-          </div>
+    <header className="bg-gradient-to-r from-sky-600 via-purple-500 to-indigo-600 shadow-lg">
+      <nav className="container mx-auto p-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="text-3xl font-bold text-white">
+          <NavLink to="/">
+            <span className="text-yellow-300">N</span>EX
+            <span className="text-yellow-300">O</span>US
+            <span className="text-yellow-300">T</span>ECH
+          </NavLink>
+        </div>
 
-          {/* Menu Button for Mobile */}
-          <div className="flex items-center">
-            <div className="md:hidden">
-              <button onClick={toggleMenu} className="focus:outline-none">
-                <svg
-                  className="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
-                  />
-                </svg>
-              </button>
-            </div>
-
-            {/* Nav Links */}
-            <ul
-              className={`md:flex md:items-center md:space-x-6 ${isOpen ? 'block' : 'hidden'} md:block`}
+        {/* Menu Button for Mobile */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="focus:outline-none text-white">
+            <svg
+              className="w-8 h-8"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <li className="hover:text-blue-700 hover:border-b-2 hover:border-blue-700 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-                <NavLink to="/">Home</NavLink>
-              </li>
-              <li className="hover:text-blue-700 hover:border-b-2 hover:border-blue-700 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-                <NavLink to="/WhyUs">Why Us</NavLink>
-              </li>
-              <li className="hover:text-blue-700 hover:border-b-2 hover:border-blue-700 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-                <NavLink to="/ServicesPage">Services</NavLink>
-              </li>
-              <li className="hover:text-blue-700 hover:border-b-2 hover:border-blue-700 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-                <NavLink to="/overview">Overview</NavLink>
-              </li>
-              <li className="hover:text-blue-700 hover:border-b-2 hover:border-blue-700 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-                <NavLink to="/testimonials">Testimonials</NavLink>
-              </li>
-              <li>
-                <NavLink
-                  to="/ContactUs"
-                  className="bg-blue-700 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
-                >
-                  Contact Us
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-    </>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Nav Links */}
+        <ul
+          className={`md:flex md:items-center md:space-x-8 bg-gradient-to-r from-indigo-600 to-purple-500 text-white p-6 md:p-0 md:bg-transparent absolute md:relative top-16 right-0 w-full md:w-auto transition-all duration-300 ease-in-out transform ${
+            isOpen ? 'block' : 'hidden'
+          } md:block z-10 shadow-lg md:shadow-none rounded-lg md:rounded-none`}
+        >
+          <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <NavLink to="/WhyUs">Why Us</NavLink>
+          </li>
+          <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <NavLink to="/ServicesPage">Services</NavLink>
+          </li>
+          <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <NavLink to="/overview">Overview</NavLink>
+          </li>
+          <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
+            <NavLink to="/testimonials">Testimonials</NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/ContactUs"
+              className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+            >
+              Contact Us
+            </NavLink>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
 };
 
