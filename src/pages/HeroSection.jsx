@@ -1,15 +1,19 @@
-
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const IsometricDesign = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-100 to-purple-100 flex flex-col justify-center items-center p-6">
-      <h1 className="text-5xl font-bold mb-8 text-center text-gray-800 drop-shadow-lg">
+    <div className="min-h-screen flex flex-col justify-center items-center pt-10 bg-cover bg-center"
+         style={{
+           backgroundImage: "url('./banner.png')", // Replace with the relative path to your image
+           backgroundSize: 'cover',
+           backgroundPosition: 'center',
+         }}>
+      <h1 className="text-7xl font-bold mb-8 text-center text-gray-800 drop-shadow-lg">
         Welcome to NexOusTech
       </h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-        {/* Block for 5G */}
+        {/* Block for NEX */}
         <div className="flex flex-col items-center relative">
           <div className="bg-blue-500 w-40 h-40 transform rotate-12 skew-y-12 shadow-lg rounded-lg flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <span className="text-white text-6xl font-bold">NEX</span>
@@ -22,9 +26,15 @@ const IsometricDesign = () => {
               <FaTwitter className="text-blue-400" />
             </a>
           </div>
+          {/* Undraw Image for NEX */}
+          <img
+            src="tech.png"
+            alt="Technology"
+            className="w-24 h-24 mt-4"
+          />
         </div>
 
-        {/* Block for C */}
+        {/* Block for OUS */}
         <div className="flex flex-col items-center relative">
           <div className="bg-green-500 w-40 h-40 transform rotate-12 shadow-lg rounded-lg flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <span className="text-white text-6xl font-bold">OUS</span>
@@ -37,9 +47,15 @@ const IsometricDesign = () => {
               <FaInstagram className="text-pink-600" />
             </a>
           </div>
+          {/* Undraw Image for OUS */}
+          <img
+            src="creative.png"
+            alt="Creative Process"
+            className="w-24 h-24 mt-4"
+          />
         </div>
 
-        {/* Block for I */}
+        {/* Block for TECH */}
         <div className="flex flex-col items-center relative">
           <div className="bg-purple-500 w-40 h-40 transform rotate-12 skew-x-12 shadow-lg rounded-lg flex items-center justify-center transition-transform duration-500 hover:scale-105">
             <span className="text-white text-6xl font-bold">TECH</span>
@@ -52,6 +68,12 @@ const IsometricDesign = () => {
               <FaTwitter className="text-blue-400" />
             </a>
           </div>
+          {/* Undraw Image for TECH */}
+          <img
+            src="code.png"
+            alt="Team Work"
+            className="w-24 h-24 mt-4"
+          />
         </div>
       </div>
 
