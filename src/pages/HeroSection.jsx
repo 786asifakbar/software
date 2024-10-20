@@ -8,8 +8,9 @@ const IsometricDesign = () => {
            backgroundSize: 'cover',
            backgroundPosition: 'center',
          }}>
-      <h1 className="text-7xl font-bold mb-8 text-center text-gray-800 drop-shadow-lg">
-        Welcome to NexOusTech
+      <h1 className="text-7xl font-bold mb-8 text-cente drop-shadow-lg">
+        <span className="text-blue-600">Welcome to </span>
+        <span className="text-white"> NexOusTech </span>
       </h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
