@@ -1,8 +1,8 @@
 // src/App.js
-import { BrowserRouter , Routes } from 'react-router-dom';
+import { BrowserRouter , Routes , Route } from 'react-router-dom';
 import Header from './Components/Header';
 import Navbar from './Components/Navbar';
-// import Home from './Pages/Home';
+import Home from './pages/Home';
 // import WhyUs from './Pages/WhyUs';
 // import ServicesPage from './Pages/ServicesPage';
 // import Overview from './Pages/Overview';
@@ -33,8 +33,8 @@ function App() {
     <Header />
     <Navbar/>
       <Routes>
-        {/* <Route Exact path="/" Component={Home} />,
-        <Route Exact path="/WhyUs" Component={WhyUs } />,
+        <Route Exact path="/" Component={Home} />,
+        {/* <Route Exact path="/WhyUs" Component={WhyUs } />,
         <Route Exact path="/ServicesPage" Component={ServicesPage } />,
         <Route Exact path="/GraphicsDesign" Component={GraphicsDesign } />,
         <Route Exact path="/BlockChain" Component={BlockChain } />,
