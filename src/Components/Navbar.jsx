@@ -9,15 +9,19 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-sky-600 via-purple-500 to-indigo-600 shadow-lg">
+    <header className="bg-gradient-to-r from-sky-500 via-purple-500 to-indigo-500 shadow-lg">
       <nav className="container mx-auto p-4 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-3xl font-bold text-white">
-          <NavLink to="/">
-            <span className="text-yellow-400">N</span>EX
-            <span className="text-yellow-400">O</span>US
-            <span className="text-yellow-400">T</span>ECH
-          </NavLink>
+        <div className="flex items-center">
+          {/* Replace 'logo.png' with your actual logo image path */}
+          <img src="/fav.png" alt="Logo" className="h-32 w-32 mr-2 rounded-full" />
+          <div className="text-3xl font-bold text-white">
+            <NavLink to="/">
+              {/* <span className="text-yellow-400">N</span>EX
+              <span className="text-yellow-400">O</span>US
+              <span className="text-yellow-400">T</span>ECH */}
+            </NavLink>
+          </div>
         </div>
 
         {/* Menu Button for Mobile */}
@@ -74,4 +78,5 @@ const Navbar = () => {
     </header>
   );
 };
+
 export default Navbar;

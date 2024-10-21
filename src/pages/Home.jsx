@@ -1,8 +1,10 @@
-
-import Carousel from "./Carousel"
 import HeroSection from "./HeroSection"
 import PagesBus from "./PagesBus"
 import ThreeCards from './ThreeCards';
+import Overview from './Overview';
+import Testimonials from './Testimonials';
+import ContactUs from "./ContactUs";
+
 
 function Home() {
   return (
@@ -10,7 +12,9 @@ function Home() {
       <HeroSection />
       <ThreeCards/>
       <PagesBus />
-      <Carousel/>
+      <Overview />
+      <Testimonials />
+      <ContactUs/>
     </>
   )
 }
