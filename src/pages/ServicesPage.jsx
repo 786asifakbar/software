@@ -68,8 +68,16 @@ const ServicesPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-gradient-to-br from-indigo-100 to-blue-50 py-20">
-      <div className="container mx-auto px-6">
+    <div 
+      className="py-20" 
+      style={{
+        backgroundImage: 'url("./banner.png")', // Replace with your image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      <div className="container mx-auto px-6 bg-white bg-opacity-80 rounded-lg">
         <h1 className="text-5xl font-extrabold text-center text-gray-900 mb-12">
           Our Services
         </h1>
@@ -82,7 +90,7 @@ const ServicesPage = () => {
               key={index}
               className="group service-card relative overflow-hidden rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 p-6 shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gradient-to-tr hover:from-blue-300 hover:to-blue-500"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-500 opacity-75 group-hover:opacity-90 transition duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-75 group-hover:opacity-90 transition duration-500"></div>
               <div className="relative z-10 flex flex-col items-center text-center">
                 <div className="icon-container mb-6">
                   {service.icon}

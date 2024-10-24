@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/f
 
 const Header = () => {
   return (
-    <header className="bg-gradient-to-r from-blue-500 to-teal-500 p-4 text-white">
+    <header className="bg-gradient-to-t from-blue-500 to-blue-800 p-4 text-white">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         
         {/* Contact Information in a line */}

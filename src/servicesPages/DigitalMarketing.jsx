@@ -1,11 +1,11 @@
-import React from 'react';
-import { FaRocket, FaThumbsUp, FaSearch, FaChartLine, FaUsers, FaClipboardList, FaEnvelope, FaChartBar } from 'react-icons/fa';
+
+import { FaRocket, FaSearch, FaChartLine, FaUsers, FaClipboardList, FaEnvelope, FaChartBar } from 'react-icons/fa';
 
 const DigitalMarketing = () => {
   return (
     <div
       className="bg-gradient-to-r from-blue-50 to-purple-50 min-h-screen p-8 bg-cover bg-center"
-      style={{ backgroundImage: 'url(./marketing-bg.jpg)' }} // Add your background image here
+      style={{ backgroundImage: 'url(./back.png)' }} // Add your background image here
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">

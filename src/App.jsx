@@ -11,7 +11,7 @@ import ContactUs from './pages/ContactUs';
 import Footer from './Components/Footer';
 import GraphicsDesign from './servicesPages/GraphicsDesign';
 import BlockChain from "./servicesPages/BlockChain"
-import WebAppDevelopment from './servicesPages/WebAppDevelopment';
+// import WebAppDevelopment from './servicesPages/WebAppDevelopment';
 // import WebDevelopment from './servicesPages/WebDevelopment';
 import DigitalMarketing from "./servicesPages/DigitalMarketing"
 import SeoEx from "./servicesPages/SeoEx"
@@ -39,11 +39,9 @@ function App() {
         <Route Exact path="/Overview" Component={Overview } />,
         <Route Exact path="/Testimonials" Component={Testimonials } />,
         <Route Exact path="/ContactUs" Component={ContactUs} />,
-
-
         <Route Exact path="/GraphicsDesign" Component={GraphicsDesign } />,
         <Route Exact path="/BlockChain" Component={BlockChain } />,
-        <Route Exact path="/WebAppDevelopment" Component={WebAppDevelopment} />,
+        {/* <Route Exact path="/WebAppDevelopment" Component={WebAppDevelopment} />, */}
         {/* <Route Exact path="/WebDevelopment" Component={WebDevelopment} />, */}
         <Route Exact path="/DigitalMarketing" Component={DigitalMarketing} />,
         <Route Exact path="/SeoEx" Component={SeoEx} />,
