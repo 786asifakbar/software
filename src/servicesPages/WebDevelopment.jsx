@@ -4,14 +4,14 @@ const WebDevelopment = () => {
   return (
     <div 
       className="min-h-screen bg-cover bg-center bg-fixed p-8 flex flex-col items-center text-white"
-      style={{ backgroundImage: "url('./banner.png')" }}
+      style={{ backgroundImage: "url('./back.png')" }}
     >
       {/* Title Section */}
       <div className="text-center mt-12">
-        <h1 className="text-4xl font-bold text-blue-200 drop-shadow-lg shadow-blue-900">
+        <h1 className="text-4xl font-bold text-blue-500 drop-shadow-lg shadow-blue-900">
           <FaCode className="inline-block mr-2" /> Web Development Services
         </h1>
-        <p className="mt-4 text-xl max-w-2xl mx-auto text-blue-100">
+        <p className="mt-4 text-xl max-w-2xl mx-auto text-gray-500">
           Bringing ideas to life with interactive, responsive, and high-performance web solutions. Specializing in modern technologies to enhance user experience.
         </p>
       </div>
@@ -25,7 +25,7 @@ const WebDevelopment = () => {
             src="./webdev.png" 
             alt="Web Development" 
             className="object-cover w-full h-64 rounded-lg shadow-lg" 
-            onError={(e) => e.target.src = './placeholder.png'} // Handle image load error
+            onError={(e) => e.target.src = './webdev.png'} // Handle image load error
           />
         </div>
         

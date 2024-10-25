@@ -2,7 +2,7 @@ const IsometricDesign = () => {
     return (
       <div className="min-h-screen flex flex-col justify-center items-center pt-10 bg-cover bg-center"
            style={{
-             backgroundImage: "url('./banner.png')", // Replace with the relative path to your image
+             backgroundImage: "url('./back.png')", // Replace with the relative path to your image
              backgroundSize: 'cover',
              backgroundPosition: 'center',
            }}>

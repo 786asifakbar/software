@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <> 
-      <footer className="bg-gray-700 text-white py-8 px-4 sm:px-8 md:px-16 lg:px-32 text-justify">
+    <>
+      <footer className="bg-gradient-to-r from-purple-600 to-blue-500 text-white py-8 px-4 sm:px-8 md:px-16 lg:px-32 text-justify shadow-lg rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-3 gap-8">
           {/* Subscribe Section */}
-          <div>
+          <div className="bg-gradient-to-r from-green-400 to-blue-500 p-4 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105">
             <h3 className="font-bold mb-4">Subscribe Our Newsletter</h3>
             <p className="mb-4">
               Stay updated with the latest news and exclusive offers. Join our newsletter for valuable insights and exciting updates in the world of technology and innovation.
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
 
           {/* Quick NavLinks Section */}
-          <div>
+          <div className="bg-gradient-to-r from-red-400 to-yellow-500 p-4 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105">
             <h3 className="font-bold mb-4">Quick NavLinks</h3>
             <ul>
               <li className="mb-2">
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
 
           {/* Address Section */}
-          <div>
+          <div className="bg-gradient-to-r from-blue-300 to-blue-500 p-4 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105">
             <h3 className="font-bold mb-4">Address</h3>
             <ul>
               <li className="mb-2 flex items-center">
@@ -62,10 +62,10 @@ const Footer = () => {
                 <span className="mr-2">📧</span> info@example.com
               </li>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-blue-600"><FaFacebookF /></a>
-                <a href="#" className="text-white hover:text-blue-400"><FaTwitter /></a>
-                <a href="#" className="text-white hover:text-pink-500"><FaInstagram /></a>
-                <a href="#" className="text-white hover:text-blue-800"><FaLinkedinIn /></a>
+                <a href="#" className="text-white hover:text-blue-600 transition duration-300"><FaFacebookF /></a>
+                <a href="#" className="text-white hover:text-blue-400 transition duration-300"><FaTwitter /></a>
+                <a href="#" className="text-white hover:text-pink-500 transition duration-300"><FaInstagram /></a>
+                <a href="#" className="text-white hover:text-blue-800 transition duration-300"><FaLinkedinIn /></a>
               </div>
             </ul>
           </div>

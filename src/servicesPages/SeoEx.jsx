@@ -4,7 +4,7 @@ import { IoAnalyticsOutline } from 'react-icons/io5';
 
 const SeoEx = () => {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-[url('./banner.png')] bg-fixed flex justify-center items-center p-8">
+    <div className="min-h-screen bg-cover bg-center bg-[url('./back.png')] bg-fixed flex justify-center items-center p-8">
       <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-all duration-500 ease-in-out max-w-5xl w-full grid md:grid-cols-2 gap-8">
         
         {/* Left Side */}

@@ -1,66 +1,26 @@
 import React, { useState, useEffect } from 'react';
 
 const testimonials = [
-  {
-    id: 1,
-    name: "John Doe",
-    image: "https://images.pexels.com/photos/886285/pexels-photo-886285.jpeg?auto=compress&cs=tinysrgb&w=600",
-    description: "This is a wonderful service that has helped our company grow immensely.",
-  },
-  {
-    id: 2,
-    name: "Jane Smith",
-    image: "https://via.placeholder.com/100",
-    description: "The team was professional and delivered the project on time. Highly recommended!",
-  },
-  {
-    id: 3,
-    name: "Michael Johnson",
-    image: "https://via.placeholder.com/100",
-    description: "Excellent service with great attention to detail. Very satisfied.",
-  },
-  {
-    id: 4,
-    name: "Emily Davis",
-    image: "https://via.placeholder.com/100",
-    description: "They went above and beyond our expectations. Outstanding work!",
-  },
-  {
-    id: 5,
-    name: "Chris Brown",
-    image: "https://via.placeholder.com/100",
-    description: "Very reliable and easy to work with. Will definitely use their services again.",
-  },
-  {
-    id: 6,
-    name: "Sarah Wilson",
-    image: "https://via.placeholder.com/100",
-    description: "Great experience from start to finish. The results speak for themselves.",
-  },
-  {
-    id: 7,
-    name: "David Lee",
-    image: "https://via.placeholder.com/100",
-    description: "Professional, efficient, and results-driven. Highly recommended!",
-  },
-  {
-    id: 8,
-    name: "Laura Martinez",
-    image: "https://via.placeholder.com/100",
-    description: "The team was communicative and delivered quality work. Very impressed!",
-  },
-  {
-    id: 9,
-    name: "James Taylor",
-    image: "https://via.placeholder.com/100",
-    description: "Our experience was great. The project was handled with professionalism.",
-  },
-  {
-    id: 10,
-    name: "Linda White",
-    image: "https://via.placeholder.com/100",
-    description: "They provided excellent service and were a pleasure to work with.",
-  },
+  { id: 1, name: "Alice Johnson", title: "CEO, Tech Innovations", image: "https://via.placeholder.com/100", description: "Fantastic service! Our project was handled professionally and exceeded expectations." },
+  { id: 2, name: "David Smith", title: "Marketing Head, Soft Solutions", image: "https://via.placeholder.com/100", description: "An absolute pleasure to work with! The team's creativity is unmatched." },
+  { id: 3, name: "Sophia Brown", title: "Founder, Green Earth", image: "https://via.placeholder.com/100", description: "High-quality service and very attentive to our needs. Highly recommend." },
+  { id: 4, name: "John Miller", title: "CTO, FinTech Solutions", image: "https://via.placeholder.com/100", description: "Professional, efficient, and truly innovative. We were impressed by the outcome." },
+  { id: 5, name: "Emma Wilson", title: "Director, HealthFirst", image: "https://via.placeholder.com/100", description: "The team was extremely cooperative and delivered exactly what we needed." },
+  { id: 6, name: "Liam Anderson", title: "Owner, Boutique Agency", image: "https://via.placeholder.com/100", description: "Their attention to detail and dedication are simply top-notch!" },
+  { id: 7, name: "Olivia Lee", title: "Head of Operations, SolarTech", image: "https://via.placeholder.com/100", description: "Great experience from start to finish. Will definitely work with them again." },
+  { id: 8, name: "James Taylor", title: "Project Manager, EduConnect", image: "https://via.placeholder.com/100", description: "The team delivered outstanding results that exceeded our expectations." },
+  { id: 9, name: "Ella Carter", title: "Manager, UrbanRealty", image: "https://via.placeholder.com/100", description: "Professional, innovative, and attentive. Highly recommended." },
+  { id: 10, name: "Lucas Johnson", title: "CEO, BlueTech Labs", image: "https://via.placeholder.com/100", description: "A truly exceptional experience. They were responsive and creative." },
+  { id: 11, name: "Grace Martin", title: "Founder, Eco Ventures", image: "https://via.placeholder.com/100", description: "The best agency we've worked with. True experts in their field." },
+  { id: 12, name: "Henry Davis", title: "Director, CareAid", image: "https://via.placeholder.com/100", description: "Superb service, excellent communication, and flawless execution." },
+  { id: 13, name: "Mia Thompson", title: "CFO, BuildRight", image: "https://via.placeholder.com/100", description: "They delivered outstanding results with great attention to detail." },
+  { id: 14, name: "William Moore", title: "COO, MedPlus", image: "https://via.placeholder.com/100", description: "Timely, professional, and highly effective in meeting our needs." },
+  { id: 15, name: "Ava Scott", title: "VP, Ocean Ventures", image: "https://via.placeholder.com/100", description: "Exceeded our expectations and brought our ideas to life seamlessly." },
+  { id: 16, name: "Sebastian Harris", title: "Owner, Artisan Goods", image: "https://via.placeholder.com/100", description: "Quality service with outstanding results, highly impressed." },
+  { id: 17, name: "Ella Walker", title: "CEO, TechPros", image: "https://via.placeholder.com/100", description: "Professional, responsive, and skilled. Couldn't ask for more." },
+  { id: 18, name: "Daniel Perez", title: "Founder, Home Haven", image: "https://via.placeholder.com/100", description: "Fantastic collaboration, really brought our vision to life!" },
+  { id: 19, name: "Zoe Turner", title: "Director, FitLife", image: "https://via.placeholder.com/100", description: "They were amazing from start to finish. We loved the final result." },
+  { id: 20, name: "Ethan Evans", title: "Product Lead, BrightLight", image: "https://via.placeholder.com/100", description: "Wonderful team, innovative approach, and smooth process." },
 ];
 
 const Testimonials = () => {
@@ -77,63 +37,53 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextTestimonial();
-    }, 2000); // Change slide every 2 seconds
+    }, 4000); // Slide every 4 seconds
 
     return () => clearInterval(interval); // Clean up interval on unmount
   }, []);
 
   return (
     <div className="container mx-auto px-4 py-24">
-      <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black text-center">
-        What Our Clients Said
-      </h1>
-      <p className="text-gray-600 mb-6 text-center">
-        Discover what our clients have to say. Real experiences, real satisfaction.
-      </p>
+      <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">Our Clients Say</h1>
+      <p className="text-gray-600 text-center mb-12">Here's what our valued clients have to say about our services.</p>
 
-      {/* Testimonial Slider */}
-      <div className="relative overflow-hidden">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${current * 100}%)` }}
-        >
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="w-full flex-shrink-0 bg-white p-6 rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-xl mx-2 my-4"
-              style={{
-                perspective: '1000px', 
-                minWidth: '300px', 
-                transform: current === testimonial.id - 1 ? 'rotateY(0deg)' : 'rotateY(-10deg)', // 3D effect
-              }}
-            >
-              <div className="flex items-center mb-4">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-16 h-16 rounded-full mr-4 border-2 border-blue-300 shadow-lg"
-                />
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">{testimonial.name}</h3>
-                </div>
-              </div>
-              <p className="text-gray-800">{testimonial.description}</p>
-            </div>
-          ))}
+      <div className="relative flex justify-center items-center">
+        {/* Testimonial Card */}
+        <div className="relative flex items-center justify-center w-11/12 md:w-3/5 lg:w-2/5 p-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105"
+             style={{
+                perspective: '1000px',
+                transform: `perspective(1000px) rotateY(${current * -5}deg)`
+              }}>
+          <div
+            className="w-full h-full text-center text-white"
+            style={{
+              transform: `rotateY(0deg)`,
+              visibility: current ? 'visible' : 'hidden'
+            }}
+          >
+            <img
+              src={testimonials[current].image}
+              alt={testimonials[current].name}
+              className="w-20 h-20 rounded-full border-2 border-white mx-auto mb-4"
+            />
+            <h3 className="text-xl font-semibold">{testimonials[current].name}</h3>
+            <p className="text-sm italic">{testimonials[current].title}</p>
+            <p className="mt-4">{testimonials[current].description}</p>
+          </div>
         </div>
 
         {/* Navigation Buttons */}
         <button
           onClick={prevTestimonial}
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-blue-600 transition"
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-blue-500 p-3 rounded-full shadow-md focus:outline-none hover:bg-gray-200 transition"
         >
-          Prev
+          &lt;
         </button>
         <button
           onClick={nextTestimonial}
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white px-4 py-2 rounded-full focus:outline-none hover:bg-blue-600 transition"
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-blue-500 p-3 rounded-full shadow-md focus:outline-none hover:bg-gray-200 transition"
         >
-          Next
+          &gt;
         </button>
       </div>
     </div>
