@@ -3,7 +3,7 @@ const About = () => {
     <section 
       className="py-16 text-gray-800"
       style={{
-        backgroundImage: 'url("./banner.png")', // Replace with your image path
+        backgroundImage: 'url("./back.png")', // Replace with your image path
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
