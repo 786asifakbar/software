@@ -1,81 +1,59 @@
 
+import { FaChartLine, FaCheckCircle } from 'react-icons/fa';
+import { IoAnalyticsOutline } from 'react-icons/io5';
 
 const SeoEx = () => {
   return (
-    <div className="bg-blue-50 min-h-screen p-8 perspective-1000">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div className="min-h-screen bg-cover bg-center bg-[url('./banner.png')] bg-fixed flex justify-center items-center p-8">
+      <div className="bg-white bg-opacity-80 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-all duration-500 ease-in-out max-w-5xl w-full grid md:grid-cols-2 gap-8">
+        
         {/* Left Side */}
-        <div className="animate-fadeInLeft opacity-0 transform transition-transform duration-500 hover:rotate-3d">
-          <h4 className="text-3xl font-bold text-blue-600 flex items-center mb-4">
-            <span className="mr-2">📈</span>
+        <div>
+          <div className="text-4xl font-semibold text-blue-600 mb-6 flex items-center gap-2">
+            <FaChartLine className="text-blue-500" />
             Search Engine Optimization (SEO)
-          </h4>
-          <p className="text-gray-700 my-4">
-            Our SEO experts at Logic Tech utilize the latest techniques to improve your website's visibility on search engines like Google. We focus on both on-page and off-page SEO strategies to enhance your rankings, drive organic traffic, and increase conversions.
-          </p>
-          <p className="text-gray-700 my-4">
-            We start by conducting comprehensive keyword research to identify the most relevant and high-performing keywords for your business. Our team then optimizes your website's content, meta tags, and structure to align with these keywords, ensuring your site is search-engine-friendly.
-          </p>
-          <p className="text-gray-700 my-4">
-            In addition to on-page optimization, we build high-quality backlinks and create compelling content that resonates with your target audience. Our goal is to establish your brand as an authority in your industry while boosting your search engine rankings.
-          </p>
-          <p className="text-gray-700 my-4">
-            We also provide detailed analytics and reporting, giving you insight into your SEO performance and helping you make informed decisions for future marketing efforts.
-          </p>
-
-          {/* Icons representing SEO technologies/services */}
-          <div className="flex space-x-4 my-4">
-            <div className="hover:scale-110 transition-transform duration-300 hover:rotate-3d">
-              <img
-                src="https://th.bing.com/th?id=OIP.Zx_gLV0_bAixP2Tj4rUdFAHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&pid=3.1&rm=2"
-                alt="SEO Optimization"
-                className="w-12"
-              />
-            </div>
-            <div className="hover:scale-110 transition-transform duration-300 hover:rotate-3d">
-              <img
-                src="https://th.bing.com/th?id=OIP.KE7ptiArqRb_mAMSx1H4dgHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&pid=3.1&rm=2"
-                alt="Keyword Research"
-                className="w-12"
-              />
-            </div>
-            <div className="hover:scale-110 transition-transform duration-300 hover:rotate-3d">
-              <img
-                src="https://th.bing.com/th?id=OIP.ncOUIaKm4lRql9ZryXZPvgHaHa&w=250&h=250&c=8&rs=1&qlt=90&r=0&o=6&pid=3.1&rm=2"
-                alt="Backlink Building"
-                className="w-12"
-              />
-            </div>
           </div>
+          <p className="text-gray-700 my-4 leading-relaxed">
+            Our SEO experts at Logic Tech utilize the latest techniques to improve your website's visibility on search engines. We focus on both on-page and off-page SEO strategies to enhance your rankings, drive organic traffic, and increase conversions.
+          </p>
+          <p className="text-gray-700 my-4 leading-relaxed">
+            Starting with comprehensive keyword research, we identify the most relevant keywords for your business. We then optimize content, meta tags, and structure to align with these keywords, making your site search-engine-friendly.
+          </p>
+          <p className="text-gray-700 my-4 leading-relaxed">
+            Our high-quality backlinks and compelling content resonate with your audience, establishing authority while boosting search engine rankings.
+          </p>
+          <p className="text-gray-700 my-4 leading-relaxed">
+            Detailed analytics and reporting provide insights into your SEO performance, helping you make informed marketing decisions.
+          </p>
 
-          {/* Text items */}
-          <div className="grid grid-cols-2 gap-4 mt-6">
-            <p className="flex items-center hover:scale-105 transition-transform duration-300 hover:rotate-3d">
-              <span className="text-blue-600 mr-2">✔️</span> SEO Optimization
-            </p>
-            <p className="flex items-center hover:scale-105 transition-transform duration-300 hover:rotate-3d">
-              <span className="text-blue-600 mr-2">✔️</span> Keyword Research
-            </p>
-            <p className="flex items-center hover:scale-105 transition-transform duration-300 hover:rotate-3d">
-              <span className="text-blue-600 mr-2">✔️</span> Backlink Building
-            </p>
-            <p className="flex items-center hover:scale-105 transition-transform duration-300 hover:rotate-3d">
-              <span className="text-blue-600 mr-2">✔️</span> Content Optimization
-            </p>
-            <p className="flex items-center hover:scale-105 transition-transform duration-300 hover:rotate-3d">
-              <span className="text-blue-600 mr-2">✔️</span> Analytics & Reporting
-            </p>
+          {/* Features */}
+          <div className="grid grid-cols-2 gap-4 mt-6 text-gray-600 text-lg">
+            {[
+              'SEO Optimization',
+              'Keyword Research',
+              'Backlink Building',
+              'Content Optimization',
+              'Analytics & Reporting',
+            ].map((feature, idx) => (
+              <div key={idx} className="flex items-center space-x-2">
+                <FaCheckCircle className="text-blue-600" />
+                <span>{feature}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Right Side */}
-        <div className="animate-fadeInRight opacity-0 transform transition-transform duration-500 hover:rotate-3d">
-          <div className="transform hover:scale-110 transition-transform duration-500">
+        <div className="relative group">
+          <div className="w-full h-full bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg overflow-hidden shadow-lg transform hover:rotate-3 hover:scale-105 transition-all duration-700 ease-in-out">
             <img
               src="./seo.png"
-              alt="SEO"
-              className="rounded-lg shadow-lg object-cover w-full"
+              alt="SEO illustration"
+              className="object-center w-full h-full opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             />
+          </div>
+          <div className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg text-indigo-500 group-hover:rotate-12 transition-transform duration-500">
+            <IoAnalyticsOutline size={32} />
           </div>
         </div>
       </div>
