@@ -8,19 +8,19 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Function to handle link clicks
+  const handleLinkClick = () => {
+    setIsOpen(false); // Close the menu when a link is clicked
+  };
+
   return (
     <header className="bg-gradient-to-r from-sky-500 via-purple-500 to-indigo-500 shadow-lg">
       <nav className="container mx-auto p-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          {/* Replace 'logo.png' with your actual logo image path */}
           <img src="/fav.png" alt="Logo" className="h-32 w-32 mr-2 rounded-full" />
           <div className="text-3xl font-bold text-white">
-            <NavLink to="/">
-              {/* <span className="text-yellow-400">N</span>EX
-              <span className="text-yellow-400">O</span>US
-              <span className="text-yellow-400">T</span>ECH */}
-            </NavLink>
+            <NavLink to="/"> {/* Add logo text if needed */} </NavLink>
           </div>
         </div>
 
@@ -51,24 +51,25 @@ const Navbar = () => {
           } md:block z-10 shadow-lg md:shadow-none rounded-lg md:rounded-none`}
         >
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/" onClick={handleLinkClick}>Home</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/About">Why Us</NavLink>
+            <NavLink to="/About" onClick={handleLinkClick}>Why Us</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/ServicesPage">Services</NavLink>
+            <NavLink to="/ServicesPage" onClick={handleLinkClick}>Services</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/overview">Overview</NavLink>
+            <NavLink to="/overview" onClick={handleLinkClick}>Overview</NavLink>
           </li>
           <li className="hover:text-yellow-300 hover:border-b-2 hover:border-yellow-300 font-bold p-2 transition duration-300 ease-in-out transform hover:scale-105">
-            <NavLink to="/testimonials">Testimonials</NavLink>
+            <NavLink to="/testimonials" onClick={handleLinkClick}>Testimonials</NavLink>
           </li>
           <li>
             <NavLink
               to="/ContactUs"
               className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-2 px-6 rounded-md transition duration-300 ease-in-out transform hover:scale-105"
+              onClick={handleLinkClick} // Close the menu on Contact Us click as well
             >
               Contact Us
             </NavLink>

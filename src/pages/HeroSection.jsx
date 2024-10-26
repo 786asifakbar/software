@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const IsometricDesign = () => {
   return (
     <div
-      className="min-h-screen flex flex-col justify-center items-center pt-10 bg-cover bg-center"
+      className="min-h-screen flex flex-col justify-center items-center pt-10 md:pt-10 sm:pt-10 md:mb-10 sm:mb-10 bg-cover bg-center"
       style={{
         backgroundImage: "url('./back.png')", // Replace with the relative path to your image
         backgroundSize: 'cover',
