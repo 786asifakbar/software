@@ -1,5 +1,5 @@
 import { FaCode } from 'react-icons/fa';
-import { DiDjango, DiNodejsSmall, DiReact, DiAngularSimple, DiPhp, DiHtml5, DiCss3, DiMongodb, DiPostgresql, DiFlutter } from 'react-icons/di';
+import { DiDjango, DiNodejsSmall, DiReact, DiAngularSimple, DiPhp, DiHtml5, DiCss3, DiMysql } from 'react-icons/di';
 
 const WebAppDevelopment = () => {
   return (
@@ -43,22 +43,13 @@ const WebAppDevelopment = () => {
               <DiHtml5 className="text-6xl text-orange-600 transform hover:scale-110 transition-transform duration-300" />
               <span className="text-gray-600 mt-2">HTML5</span>
             </div>
-            {/* New Technologies */}
             <div className="flex flex-col items-center">
-              <DiCss3 className="text-blue-400 text-6xl transform hover:scale-110 transition-transform duration-300" />
+              <DiCss3 className="text-6xl text-blue-400 transform hover:scale-110 transition-transform duration-300" />
               <span className="text-gray-600 mt-2">CSS3</span>
             </div>
             <div className="flex flex-col items-center">
-              <DiMongodb className="text-green-700 text-6xl transform hover:scale-110 transition-transform duration-300" />
-              <span className="text-gray-600 mt-2">MongoDB</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <DiPostgresql className="text-blue-600 text-6xl transform hover:scale-110 transition-transform duration-300" />
-              <span className="text-gray-600 mt-2">PostgreSQL</span>
-            </div>
-            <div className="flex flex-col items-center">
-              <DiFlutter className="text-blue-400 text-6xl transform hover:scale-110 transition-transform duration-300" />
-              <span className="text-gray-600 mt-2">Flutter</span>
+              <DiMysql className="text-6xl text-blue-800 transform hover:scale-110 transition-transform duration-300" />
+              <span className="text-gray-600 mt-2">MySQL</span>
             </div>
           </div>
         </div>
