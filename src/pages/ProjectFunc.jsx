@@ -3,15 +3,15 @@ import './SoftwareHousePage.css';
 
 const SoftwareHousePage = () => {
   const words = [
-    { text: 'Client Focus', color: 'from-blue-400 to-blue-600' },
-    { text: 'Innovation', color: 'from-green-300 to-green-500' },
-    { text: 'Quality Assurance', color: 'from-purple-400 to-purple-600' },
-    { text: 'Collaboration', color: 'from-yellow-300 to-yellow-500' },
-    { text: 'Custom Solutions', color: 'from-red-400 to-red-600' },
-    { text: 'Reliability', color: 'from-gray-400 to-gray-500' },
-    { text: 'Support', color: 'from-teal-400 to-teal-600' },
-    { text: 'Growth', color: 'from-pink-300 to-pink-500' },
-    { text: 'Agility', color: 'from-indigo-400 to-indigo-600' },
+    { text: 'Client Focus', color: 'bg-gradient-to-br from-blue-400 to-blue-600' },
+    { text: 'Innovation', color: 'bg-gradient-to-br from-green-300 to-green-500' },
+    { text: 'Quality Assurance', color: 'bg-gradient-to-br from-purple-400 to-purple-600' },
+    { text: 'Collaboration', color: 'bg-gradient-to-br from-yellow-300 to-yellow-500' },
+    { text: 'Custom Solutions', color: 'bg-gradient-to-br from-red-400 to-red-600' },
+    { text: 'Reliability', color: 'bg-gradient-to-br from-gray-400 to-gray-500' },
+    { text: 'Support', color: 'bg-gradient-to-br from-teal-400 to-teal-600' },
+    { text: 'Growth', color: 'bg-gradient-to-br from-pink-300 to-pink-500' },
+    { text: 'Agility', color: 'bg-gradient-to-br from-indigo-400 to-indigo-600' },
   ];
 
   const statistics = [
@@ -61,13 +61,13 @@ const SoftwareHousePage = () => {
   }, [isInView, statistics]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 p-6">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-white p-6">
       {/* Word Bubbles Section */}
       <div className="flex flex-wrap gap-6 justify-center max-w-4xl mb-10">
         {words.map((word, index) => (
           <div
             key={index}
-            className={`word-bubble bg-gradient-to-br ${word.color} text-white font-semibold py-3 px-5 rounded-xl shadow-lg transform transition-transform hover:scale-105`}
+            className={`${word.color} text-white font-semibold py-3 px-5 rounded-xl shadow-lg transform transition-transform hover:scale-105 hover:shadow-2xl`}
           >
             {word.text}
           </div>

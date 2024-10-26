@@ -27,7 +27,8 @@ const PagesBus = () => {
             isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
           }`}
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black tracking-tight hover:text-blue-600 transition-colors duration-300">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-black tracking-tight text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg
+           hover:text-blue-600 transition-colors duration-300">
             Push Your Business to the Next Level
           </h1>
           <p className="text-lg text-gray-900 mb-8 leading-relaxed">

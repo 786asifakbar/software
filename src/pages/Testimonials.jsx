@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const testimonials = [
   { id: 1, name: "Alice Johnson", title: "CEO, Tech Innovations", image: "https://via.placeholder.com/100", description: "Fantastic service! Our project was handled professionally and exceeded expectations." },
@@ -44,7 +44,7 @@ const Testimonials = () => {
 
   return (
     <div className="container mx-auto px-4 py-24">
-      <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">Our Clients Say</h1>
+      <h1 className="text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">Our Clients Say</h1>
       <p className="text-gray-600 text-center mb-12">Here's what our valued clients have to say about our services.</p>
 
       <div className="relative flex justify-center items-center">

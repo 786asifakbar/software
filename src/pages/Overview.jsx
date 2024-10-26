@@ -12,7 +12,7 @@ const Overview = () => {
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Page Title */}
           <div className="text-center mb-12 animate-fade-in-down">
-            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-4">
+            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
               <FaInfoCircle className="inline-block mr-2 text-blue-600" />
               Software & Services Overview
             </h1>

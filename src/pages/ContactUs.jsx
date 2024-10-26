@@ -9,7 +9,7 @@ const ContactUs = () => {
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="container mx-auto px-4 py-16">
         <div className="bg-white rounded-lg p-8 shadow-2xl transform transition-transform duration-300 hover:scale-105">
-          <h1 className="text-7xl font-bold text-center mb-8 text-blue-700 ">Contact Us</h1>
+          <h1 className="text-center mb-8 text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">Contact Us</h1>
           <div className="flex flex-col md:flex-row md:items-start">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
