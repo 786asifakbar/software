@@ -1,5 +1,5 @@
 
-import { FaCheckCircle, FaRegChartBar, FaClipboardList, FaShoppingCart } from 'react-icons/fa';
+import { FaCheckCircle, FaShoppingCart } from 'react-icons/fa';
 
 const PosEx = () => {
   return (
