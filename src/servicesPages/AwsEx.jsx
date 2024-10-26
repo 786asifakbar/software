@@ -10,7 +10,7 @@ const AwsEx = () => {
         backgroundPosition: 'center',
       }}
     >
-      <div className="bg-gradient-to-r from-blue-50 via-purple-100 to-blue-50 bg-opacity-75 rounded-lg p-6">
+      <div className="bg-white bg-opacity-90 rounded-lg p-8 shadow-2xl">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             {/* Left Side - 3D Rotating Image */}
