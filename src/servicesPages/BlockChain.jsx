@@ -6,9 +6,10 @@ const BlockChain = () => {
     <div 
       className="min-h-screen p-8 flex items-center justify-center"
       style={{
-        backgroundImage: 'url("./background.jpg")', // Replace with your background image path
+        backgroundImage: 'url("./back.png")', // Replace with your background image path
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
       <div className="container mx-auto px-6 bg-white bg-opacity-90 rounded-xl shadow-lg">
@@ -18,7 +19,7 @@ const BlockChain = () => {
             <div className="relative group transform transition duration-1000 hover:rotate-y-12 hover:rotate-x-6 hover:scale-105">
               <div className="w-80 h-80 md:w-96 md:h-96 bg-white rounded-3xl shadow-2xl transform group-hover:rotate-x-0 group-hover:rotate-y-0 transition-all duration-1000 ease-in-out">
                 <img
-                  src="./block.png"
+                  src="./block.png" // Path to your blockchain image
                   alt="Blockchain Illustration"
                   className="absolute inset-0 w-full h-full object-cover rounded-3xl"
                 />
@@ -28,8 +29,7 @@ const BlockChain = () => {
 
           {/* Right Side - Text Content */}
           <div className="text-left space-y-6">
-            <h1 className="text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text 
-                       bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
+            <h1 className="text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
               Blockchain Development
             </h1>
             <p className="text-gray-800 text-lg leading-relaxed mb-6">

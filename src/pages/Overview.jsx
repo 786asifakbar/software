@@ -7,7 +7,7 @@ const Overview = () => {
     <>
       <div className="relative bg-gray-50 min-h-screen py-24 overflow-hidden">
         {/* Background Parallax */}
-        <div className="absolute top-0 left-0 w-full h-full bg-fixed bg-[url('/banner.png')] opacity-10 z-0" style={{ backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-fixed bg-[url('./fav.png')] opacity-10 z-0" style={{ backgroundPosition: 'center', backgroundSize: 'cover' }}></div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
           {/* Page Title */}
