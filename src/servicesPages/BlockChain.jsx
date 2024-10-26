@@ -3,8 +3,15 @@ import { SiSolidity, SiRust, SiEthereum, SiPolkadot } from 'react-icons/si';
 
 const BlockChain = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-50 via-purple-100 to-blue-50 min-h-screen p-8 flex items-center justify-center">
-      <div className="container mx-auto px-6">
+    <div 
+      className="min-h-screen p-8 flex items-center justify-center"
+      style={{
+        backgroundImage: 'url("./background.jpg")', // Replace with your background image path
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      <div className="container mx-auto px-6 bg-white bg-opacity-90 rounded-xl shadow-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side - 3D Image */}
           <div className="flex justify-center md:justify-end">
@@ -21,7 +28,8 @@ const BlockChain = () => {
 
           {/* Right Side - Text Content */}
           <div className="text-left space-y-6">
-            <h1 className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600 mb-4 tracking-wide">
+            <h1 className="text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
               Blockchain Development
             </h1>
             <p className="text-gray-800 text-lg leading-relaxed mb-6">

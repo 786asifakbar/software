@@ -1,5 +1,5 @@
 
-import { FaChartLine, FaCheckCircle } from 'react-icons/fa';
+import {FaCheckCircle } from 'react-icons/fa';
 import { IoAnalyticsOutline } from 'react-icons/io5';
 
 const SeoEx = () => {
@@ -9,8 +9,8 @@ const SeoEx = () => {
         
         {/* Left Side */}
         <div>
-          <div className="text-4xl font-semibold text-blue-600 mb-6 flex items-center gap-2">
-            <FaChartLine className="text-blue-500" />
+          <div className="flex items-center gap-2 text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
             Search Engine Optimization (SEO)
           </div>
           <p className="text-gray-700 my-4 leading-relaxed">

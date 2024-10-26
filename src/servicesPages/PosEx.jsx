@@ -1,13 +1,19 @@
-import React from 'react';
+
+import { FaCheckCircle, FaRegChartBar, FaClipboardList, FaShoppingCart } from 'react-icons/fa';
 
 const PosEx = () => {
   return (
-    <div className="bg-blue-50 min-h-screen p-8">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div className="bg-white min-h-screen p-8 relative">
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: 'url(./back.png)' }} // Add your background image here
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
         {/* Left Side */}
-        <div className="transition-transform duration-700 ease-in-out transform hover:translate-x-4 opacity-100">
-          <h2 className="text-4xl font-bold text-blue-600 flex items-center">
-            <span className="material-icons mr-2">trending_up</span>
+        <div className="transition-transform duration-700 ease-in-out transform hover:translate-x-4 hover:shadow-xl opacity-100 p-6 bg-white rounded-lg shadow-md backdrop-blur-md">
+          <h2 className="text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
+            <FaShoppingCart className="mr-2 text-5xl" />
             Point of Sale (POS) Solutions
           </h2>
           <p className="text-gray-700 my-4">
@@ -52,41 +58,41 @@ const PosEx = () => {
           </div>
 
           {/* Text with check icons */}
-          <div className="grid grid-cols-2 gap-4 mt-6">
+          <div className="grid grid-cols-2 gap-4 mt-6 text-gray-700">
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               POS Register
             </div>
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               Inventory Management
             </div>
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               Sales Reporting
             </div>
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               Customer Management
             </div>
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               Receipt Printing
             </div>
             <div className="flex items-center transform transition hover:scale-105 duration-500">
-              <span className="material-icons text-blue-600 mr-2">check_circle</span>
+              <FaCheckCircle className="text-blue-600 mr-2" />
               Sales Analytics
             </div>
           </div>
         </div>
 
         {/* Right Side */}
-        <div className="transition-transform duration-700 ease-in-out transform hover:translate-x-4">
+        <div className="transition-transform duration-700 ease-in-out transform hover:scale-105 hover:shadow-xl">
           <div className="rounded-lg shadow-lg overflow-hidden">
             <img
-              src=".\pos.png"
+              src="./pos.png"
               alt="POS"
-              className="object-cover w-full"
+              className="object-cover w-full rounded-lg shadow-lg transition-transform duration-700 hover:scale-105"
             />
           </div>
         </div>

@@ -10,7 +10,11 @@ const About = () => {
     >
       <div className="container mx-auto px-5 bg-white bg-opacity-90 rounded-lg shadow-lg">
         {/* Section Title */}
-        <h2 className="text-center mb-8 text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg">
+        <h2 className="
+                       text-center mb-8 text-5xl font-extrabold text-transparent bg-clip-text 
+                       bg-gradient-to-r from-blue-600 to-purple-600 tracking-wide text-shadow-lg
+                       
+                       ">
           About Us
         </h2>
 
