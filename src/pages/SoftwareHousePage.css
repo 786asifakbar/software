@@ -1,0 +1,28 @@
+.word-bubble {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    perspective: 1200px;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  .word-bubble:hover {
+    transform: rotateX(15deg) rotateY(-15deg) scale(1.2) translateZ(10px);
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.4);
+    background-position: right;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  }
+  
+  .word-bubble:active {
+    transform: rotateX(5deg) rotateY(-5deg) scale(1.1);
+  }
+  
+  .stat-bubble {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .stat-bubble:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+  }
+  

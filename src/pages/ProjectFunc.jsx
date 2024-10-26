@@ -1,133 +1,97 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import './SoftwareHousePage.css';
 
-// Sample Testimonials Data
-const testimonials = [
-  {
-    id: 1,
-    name: "Alice Johnson",
-    title: "CEO, Tech Innovations",
-    image: "https://via.placeholder.com/100",
-    description: "Fantastic service! Our project was handled professionally and exceeded expectations.",
-  },
-  {
-    id: 2,
-    name: "David Smith",
-    title: "Marketing Head, Soft Solutions",
-    image: "https://via.placeholder.com/100",
-    description: "An absolute pleasure to work with! The team's creativity is unmatched.",
-  },
-  // Add more testimonials as needed...
-];
+const SoftwareHousePage = () => {
+  const words = [
+    { text: 'Client Focus', color: 'from-blue-400 to-blue-600' },
+    { text: 'Innovation', color: 'from-green-300 to-green-500' },
+    { text: 'Quality Assurance', color: 'from-purple-400 to-purple-600' },
+    { text: 'Collaboration', color: 'from-yellow-300 to-yellow-500' },
+    { text: 'Custom Solutions', color: 'from-red-400 to-red-600' },
+    { text: 'Reliability', color: 'from-gray-400 to-gray-500' },
+    { text: 'Support', color: 'from-teal-400 to-teal-600' },
+    { text: 'Growth', color: 'from-pink-300 to-pink-500' },
+    { text: 'Agility', color: 'from-indigo-400 to-indigo-600' },
+  ];
 
-// Project Functions Component
-const ProjectFunctions = () => {
-  return (
-    <div className="flex flex-col items-center">
-      <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Project Functions</h2>
-      <p className="text-gray-600 mb-8 text-center">We offer a wide range of project functions to ensure your success.</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-          <h3 className="text-xl font-semibold text-blue-500 mb-2">Function 1</h3>
-          <p className="text-gray-700">Description of function 1.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-          <h3 className="text-xl font-semibold text-blue-500 mb-2">Function 2</h3>
-          <p className="text-gray-700">Description of function 2.</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-lg transform transition-transform hover:scale-105">
-          <h3 className="text-xl font-semibold text-blue-500 mb-2">Function 3</h3>
-          <p className="text-gray-700">Description of function 3.</p>
-        </div>
-        {/* Add more functions as needed */}
-      </div>
-    </div>
-  );
-};
+  const statistics = [
+    { label: 'Projects Completed', value: 95, suffix: '%' },
+    { label: 'Client Satisfaction', value: 98, suffix: '%' },
+    { label: 'Ongoing Projects', value: 12, suffix: '' },
+    { label: 'Years of Experience', value: 10, suffix: '+' },
+    { label: 'Team Members', value: 50, suffix: '+' },
+  ];
 
-// Testimonials Component
-const Testimonials = () => {
-  const [current, setCurrent] = useState(0);
-
-  const nextTestimonial = () => {
-    setCurrent((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const [counts, setCounts] = useState(statistics.map(() => 0));
+  const statsRef = useRef(null);
+  const [isInView, setIsInView] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextTestimonial();
-    }, 4000); // Slide every 4 seconds
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    return () => clearInterval(interval); // Clean up interval on unmount
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
   }, []);
 
+  useEffect(() => {
+    if (isInView) {
+      const intervalIds = statistics.map((stat, index) => {
+        return setInterval(() => {
+          setCounts((prevCounts) => {
+            const newCounts = [...prevCounts];
+            if (newCounts[index] < stat.value) {
+              newCounts[index] += 1;
+            }
+            return newCounts;
+          });
+        }, 30);
+      });
+
+      return () => intervalIds.forEach((id) => clearInterval(id));
+    }
+  }, [isInView, statistics]);
+
   return (
-    <div className="my-24">
-      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">What Our Clients Say</h2>
-      <div className="relative flex justify-center items-center">
-        <div
-          className="relative flex items-center justify-center w-full md:w-2/3 p-8 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg shadow-lg transition-transform duration-500 ease-in-out"
-        >
-          <div className="w-full h-full text-center text-white">
-            <img
-              src={testimonials[current].image}
-              alt={testimonials[current].name}
-              className="w-20 h-20 rounded-full border-2 border-white mx-auto mb-4"
-            />
-            <h3 className="text-xl font-semibold">{testimonials[current].name}</h3>
-            <p className="text-sm italic">{testimonials[current].title}</p>
-            <p className="mt-4">{testimonials[current].description}</p>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-100 to-gray-300 p-6">
+      {/* Word Bubbles Section */}
+      <div className="flex flex-wrap gap-6 justify-center max-w-4xl mb-10">
+        {words.map((word, index) => (
+          <div
+            key={index}
+            className={`word-bubble bg-gradient-to-br ${word.color} text-white font-semibold py-3 px-5 rounded-xl shadow-lg transform transition-transform hover:scale-105`}
+          >
+            {word.text}
           </div>
-        </div>
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevTestimonial}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-blue-500 p-3 rounded-full shadow-md focus:outline-none hover:bg-gray-200 transition"
-        >
-          &lt;
-        </button>
-        <button
-          onClick={nextTestimonial}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-blue-500 p-3 rounded-full shadow-md focus:outline-none hover:bg-gray-200 transition"
-        >
-          &gt;
-        </button>
+        ))}
       </div>
-    </div>
-  );
-};
 
-// Project Completion Component
-const ProjectCompletion = () => {
-  return (
-    <div className="py-24 bg-gray-50">
-      <h2 className="text-3xl font-bold text-blue-900 text-center mb-8">Project Completion Rate</h2>
-      <div className="flex justify-center">
-        <div className="bg-white p-10 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-blue-500 mb-4">95% Completion Rate</h3>
-          <p className="text-gray-700">We are proud to have a high completion rate, ensuring that your projects are delivered on time and to your satisfaction.</p>
+      {/* Statistics Section */}
+      <div className="flex justify-center w-full">
+        <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center max-w-2xl">
+          {statistics.map((stat, index) => (
+            <div
+              key={index}
+              className="stat-bubble bg-gradient-to-br from-gray-50 to-gray-200 shadow-xl rounded-xl p-6 border border-gray-300 transform transition-transform duration-300 hover:scale-110 hover:shadow-2xl"
+            >
+              <div className="text-4xl font-extrabold text-gray-700">
+                {counts[index]}{stat.suffix}
+              </div>
+              <div className="text-gray-600 mt-2 font-semibold">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-// Main Page Component
-const ProjectPage = () => {
-  return (
-    <div className="container mx-auto px-4">
-      <header className="py-12">
-        <h1 className="text-5xl font-bold text-blue-900 text-center">Our Projects</h1>
-        <p className="text-gray-600 text-center mt-4">Delivering excellence in every project.</p>
-      </header>
-      <ProjectFunctions />
-      <ProjectCompletion />
-      <Testimonials />
-    </div>
-  );
-};
-
-export default ProjectPage;
+export default SoftwareHousePage;
